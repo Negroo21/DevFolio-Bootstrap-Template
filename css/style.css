@@ -1,0 +1,371 @@
+body {
+  background-color: #f5f5f5;
+}
+
+.line {
+  width: 2.5rem;
+  border: 0.125rem rgb(77, 136, 245) solid;
+  margin: 0 auto;
+}
+
+/* navbar */
+.navbar {
+  background-color: hsla(0, 0%, 0%, 0.9);
+  position: fixed;
+  width: 100%;
+  z-index: 1111111;
+}
+.let-space {
+  letter-spacing: 0.0625rem;
+}
+
+.dropdown-item {
+  color: #4e4e4e !important;
+}
+.nav-link {
+  padding: 0 !important;
+  position: relative;
+}
+.nav-link::before {
+  content: "";
+  width: 0%;
+  height: 0.125rem;
+  background-color: #ffffff;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  transition: width 0.5s;
+}
+.nav-link:hover::before {
+  width: 100%;
+}
+.dropdown .dropdown-menu {
+  display: none;
+}
+.dropdown:hover > .dropdown-menu,
+.dropend:hover > .dropdown-menu {
+  display: block;
+  margin-top: 0.375rem;
+}
+.dropend:hover > .dropdown-menu {
+  position: absolute;
+  top: 0;
+  left: 105%;
+}
+
+/* header */
+header {
+  color: #fff;
+}
+
+.anime h4 {
+  display: block;
+  color: #fff;
+}
+
+.anime h4:after {
+  content: "|";
+}
+.developer {
+  width: 0;
+}
+.designer,
+.developer {
+  display: inline-block;
+  vertical-align: middle;
+  overflow: hidden;
+  margin-right: -0.25rem;
+}
+@keyframes dev-anime {
+  0% {
+    width: 0rem;
+  }
+
+  25% {
+    width: 6.875rem;
+  }
+  50% {
+    width: 0rem;
+  }
+  100% {
+    width: 0rem;
+  }
+}
+@keyframes des-anime {
+  0% {
+    width: 0rem;
+  }
+
+  25% {
+    width: 6.25rem;
+  }
+  50% {
+    width: 0rem;
+  }
+  100% {
+    width: 0rem;
+  }
+}
+
+.designer {
+  animation-duration: 4s;
+  animation-name: des-anime;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+.developer {
+  animation-duration: 4s;
+  animation-delay: 4s;
+  animation-name: dev-anime;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+.home {
+  background-image: url(../images/hero-bg.jpg);
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center center;
+  height: 100vh;
+  position: relative;
+}
+
+.overlay {
+  background-color: rgba(0, 0, 0, 0.6);
+  position: absolute;
+  top: 0;
+  left: 0rem;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0.9;
+}
+
+.content {
+  color: #fff;
+
+  font-weight: 600;
+  z-index: 1;
+}
+
+.content p {
+  font-size: 3.7rem !important;
+}
+.content p {
+  color: #fff;
+  font-weight: 37.5rem;
+}
+
+/* about */
+.bar {
+  background-color: rgb(149, 206, 233);
+  height: 0.625rem;
+  margin-bottom: 1rem;
+}
+.about-img {
+  border-radius: 5%;
+}
+.status {
+  height: 100%;
+}
+.h-tml {
+  width: 85%;
+}
+.css {
+  width: 75%;
+}
+.php {
+  width: 50%;
+}
+.javascript {
+  width: 90%;
+}
+
+/* services */
+.icon {
+  margin: auto;
+  height: 6.25rem;
+  width: 6.25rem;
+  font-size: 2rem;
+  box-shadow: 0 0 0 0.625rem #0078ff;
+  transition: 0.3s ease-in;
+}
+.card:hover .icon {
+  background-color: #0078ff;
+  box-shadow: 0 0 0 0.625rem #b8cce4c4;
+  color: #fff;
+}
+
+/* records */
+.records {
+  background-image: url(../images/counters-bg.jpg);
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+}
+.records-overlay {
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #0078ffb3;
+  color: white;
+  padding: 6.25rem 0;
+}
+
+.icon-record {
+  margin: auto;
+  height: 3.75rem;
+  width: 3.75rem;
+  font-size: 2rem;
+  background-color: #0078ffb3;
+  box-shadow: 0 0 0 0.5rem #b8cce4e5;
+  color: #fff;
+}
+
+/* Portfolio */
+.port-card img {
+  width: 100%;
+  overflow-clip-margin: content-box;
+  transition: 1s all ease;
+}
+.image {
+  display: block;
+  overflow: hidden;
+}
+.port-card {
+  font-size: 0.8rem;
+  font-style: normal;
+  font-weight: 25rem;
+}
+.port-card .b-span {
+  color: #0078ff;
+}
+.port-card i {
+  font-size: 2.5rem;
+  color: #0078ff;
+}
+.port-card:hover img {
+  transform: scale(1.3);
+}
+
+/* slider */
+.slider-section {
+  background-image: url(../images/overlay-bg.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+  background-size: cover;
+  position: relative;
+  color: white;
+}
+.slider-overlay {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 120, 255, 0.7);
+  opacity: 0.9;
+}
+
+.carousel {
+  align-items: center;
+  padding: 7.5rem 3.125rem;
+}
+.carousel-indicators {
+  position: relative;
+  margin: 0 auto;
+}
+.carousel-indicators [data-bs-target] {
+  border-radius: 50%;
+  width: 0.625rem;
+  height: 0.625rem;
+}
+
+/* blog */
+.blog-card .title-card {
+  width: fit-content;
+  padding: 0.3125rem 0.625rem;
+  background-color: #0078ff;
+  color: white;
+  transform: translateY(-50%);
+}
+.profile-photo img {
+  width: 1.875rem;
+  height: 1.875rem;
+  border-radius: 50%;
+  display: inline-block;
+}
+.profile-photo a {
+  text-decoration: none;
+  color: #534f4f;
+}
+
+.time-icon {
+  color: #534f4f;
+}
+
+/* Contact */
+.contact {
+  background-image: url("../images/overlay-bg.jpg");
+  box-shadow: 0 13px 8px -10px rgba(0, 0, 0, 0.1);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  position: relative;
+}
+.contact .overlay {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 120, 255, 0.7);
+  opacity: 0.9;
+  z-index: 0;
+}
+
+.contact form .form-control {
+  padding: 10px 15px;
+  font-size: 14px;
+}
+.line-contact {
+  width: 6.2rem;
+  border: 0.125rem rgb(41, 108, 233) solid;
+  margin-top: 0.2rem;
+}
+.contact .btn__form {
+  font-size: 1.2rem;
+  transition: 0.4s;
+}
+.contact .btn__form:hover {
+  color: #fff;
+  background-color: #0078ff;
+  box-shadow: 0 0 0 5px #cde1f8;
+}
+.contact .contact__list__icon {
+  font-size: 16px;
+  color: #0078ff;
+}
+.contact .ico-circle {
+  width: 35px;
+  height: 35px;
+  font-size: 1.1rem;
+  margin-inline: 15px;
+  box-shadow: 0 0 0 4px #0078ff;
+  transition: all 0.5s ease;
+}
+.contact .ico-circle:hover {
+  background-color: #0078ff;
+  box-shadow: 0 0 0 4px #cde1f8;
+}
+
+.contact .ico-circle a {
+  color: #000;
+}
+.contact .ico-circle:hover a {
+  color: #fff;
+}
+
+/* footer */
+.footer {
+  padding: 1.875rem 0rem 0.625rem 0rem;
+  background-color: #0062d3f8;
+}
